@@ -35,9 +35,9 @@ const config = {
     //   },
     // ],
   ],
-  // 配置全局 Scss 变量
+  // 用于控制对 scss 代码的编译行为，默认使用 dart-sass;
   sass: {
-    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`,
+    data: `@import "@nutui/nutui-taro/dist/styles/variables.scss";`, // 配置全局 Scss 变量; 
   },
   designWidth (input) {
     // 配置 NutUI 375 尺寸
@@ -69,7 +69,7 @@ const config = {
   framework: 'vue3',
   compiler: {
     type: 'webpack5',
-    prebundle: { enable: false }
+    prebundle: { enable: false }, // 是否开启依赖预编译功能; 只有 Webpack5 支持
   },
   cache: {
     enable: false // Webpack5 持久化缓存配置。默认配置请参考：https://docs.taro.zone/docs/config-detail#cache
